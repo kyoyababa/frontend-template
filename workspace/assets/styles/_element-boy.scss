@@ -1,0 +1,186 @@
+elem-boy {
+  top: 160px;
+  left: 240px;
+}
+
+elem-boy-head {
+  z-index: 999;
+  position: relative;
+  width: 30px;
+  height: 50px;
+  background-color: rgb(26,35,18);
+  clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+  transform:
+    skew(6deg, 2deg)
+    rotate(-4deg)
+    translate(25px, -32px);
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: calc(100% - 3px - 3px);
+    height: calc(100% - 3px - 3px);
+    background-image: linear-gradient(
+      0deg,
+      rgb(201,166,98) 0%,
+      rgb(121,74,0) 21%,
+      rgb(160,112,50) 41%,
+      rgb(148,99,69) 61%,
+      rgb(44,47,36) 80%,
+      rgb(26,35,18) 100%
+    );
+    clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+    transform: translate(-50%, -50%);
+  }
+}
+
+elem-boy-emotion {
+  width: 18px;
+  height: 60px;
+  background-image: linear-gradient(
+    0deg,
+    rgb(162,89,46) 0%,
+    rgb(191,58,41) 100%
+  );
+  clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+  transform:
+    skew(3deg, 2deg)
+    rotate(38deg)
+    translate(-20px, -92px);
+}
+
+elem-boy-body {
+  position: relative;
+  width: 60px;
+  height: 190px;
+  transform: skew(-12deg, -13deg) rotate(-8deg);
+  background-color: rgb(18,25,53);
+  clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: calc(100% - 3px - 3px);
+    height: calc(100% - 3px - 3px);
+    background-image: linear-gradient(
+      0deg,
+      rgb(20,28,51) 0%,
+      rgb(119,132,174) 21%,
+      rgb(32,26,50) 41%,
+      rgb(85,56,86) 61%,
+      rgb(17,25,46) 80%,
+      rgb(18,25,53) 100%
+    );
+    clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+    transform: translate(-50%, -50%);
+  }
+}
+
+elem-boy-arms {
+  width: 120px;
+  height: 2px;
+  background-color: #2b3423;
+  transform:
+    rotate(-9deg)
+    translate(-35px, 40px);
+}
+
+elem-boy-foot {
+  width: 35px;
+  height: 50px;
+  background-color: #A30F31;
+  clip-path: polygon(0% 30%, 100% 0%, 70% 100%, 30% 90%);
+  transform: translate(7px, 160px);
+}
+
+elem-road-for-boy {
+  position: relative !important;
+  top: 260px;
+  left: 260px;
+
+  &:before {
+    content: '';
+    width: 60px;
+    height: 150px;
+    background-color: #000;
+    clip-path: polygon(0% 0%, 100% 0%, 55% 100%, 45% 100%);
+    transform:
+      skew(-47deg, -14deg)
+      rotate(40deg);
+  }
+}
+
+elem-road-for-boy-steps {
+  position: absolute;
+
+  > li {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #271600;
+
+    &:nth-child(1) {
+      background-color: #794837;
+      transform: translate(109px, -6px) skew(-6deg, 18deg);
+    }
+    &:nth-child(2) {
+      background-color: #342927;
+      transform: translate(94px, 8px) skew(-6deg, 28deg);
+    }
+    &:nth-child(3) {
+      background-color: #4B3635;
+      transform: translate(76px, 20px) skew(14deg, 3deg);
+    }
+    &:nth-child(4) {
+      background-color: #22212F;
+      transform: translate(57px, 30px) skew(4deg, 3deg);
+    }
+    &:nth-child(5) {
+      background-color: #171E26;
+      transform: translate(39px, 45px) skew(4deg, 3deg);
+    }
+  }
+}
+
+elem-boy-wind > li {
+  position: relative;
+  width: 20px;
+  height: 50px;
+  background-color: #805A2D;
+  clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+  transform: rotate(-70deg);
+
+  &:nth-child(1) {
+    top: 56px;
+    left: 58px;
+  }
+
+  &:nth-child(2) {
+    top: 88px;
+    left: 49px;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: calc(100% - 3px - 3px);
+    height: calc(100% - 3px - 3px);
+    background-color: #DADCB7;
+    clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+    transform: translate(-50%, -50%);
+  }
+}
+
+elem-boy-impatient {
+  top: 82px;
+  left: 92px;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  background-color: #0D1C2F;
+}

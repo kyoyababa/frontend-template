@@ -1,0 +1,38 @@
+/**
+ * Elements style reset
+ **/
+.elem-picture {
+  overflow: hidden;
+  position: relative;
+}
+
+/**
+ * Browser style reset
+ **/
+.elem-picture * {
+  position: absolute;
+  display: block;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  /* NOTE: TODO */
+  &:before,
+  &:after {
+    position: absolute;
+    display: block;
+  }
+}
+
+.elem-picture {
+  width: 454px;
+  height: 661px;
+  background-image: linear-gradient(0deg,
+    rgb(171,123,74) 0%,
+    rgb(202,187,130) 21%,
+    rgb(220,229,182) 41%,
+    rgb(228,232,181) 61%,
+    rgb(218,222,172) 80%,
+    rgb(197,204,137) 100%
+  );
+}
