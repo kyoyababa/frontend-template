@@ -16,11 +16,12 @@
     "uglifyjs": "uglifyjs dist/assets/scripts/bundle.js > dist/assets/scripts/bundle.min.js",
     "watch:browserify": "watch 'npm run browserify' workspace/assets/scripts/",
     "transport": "cpx workspace/assets/images/**/* dist/assets/images",
+    "webserver": "http-server dist",
     "prepare": "npm run clean && npm run mkdir",
     "build": "npm run prepare && (npm run ejs & (npm run sass && npm run autoprefixer) & npm run browserify & npm run transport)",
     "build:production": "npm run build && (npm run uglifycss & npm run uglifyjs)",
     "watch": "npm run prepare && (npm run watch:ejs & npm run watch:sass & npm run watch:browserify)",
-    "start": "npm run watch"
+    "start": "npm run webserver & npm run watch"
   },
   "author": "kyoyababa",
   "license": "MIT",
@@ -37,6 +38,7 @@
     "del-cli": "^0.2.1",
     "ejs-cli": "^2.0.0",
     "exorcist": "^0.4.0",
+    "http-server": "^0.9.0",
     "jquery": "^3.1.1",
     "node-sass": "^4.3.0",
     "nodemon": "^1.11.0",
