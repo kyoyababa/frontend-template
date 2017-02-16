@@ -1,0 +1,44 @@
+// For block elements.
+$cs-wrapper-width: 960px;
+$cs-header-height: 50px;
+$cs-footer-height: 50px;
+
+
+// For opacities.
+$opacity-overlay: 0.75;
+$opacity-disabled: 0.25;
+
+
+// For base colours.
+$basecolor-primary: lightblue;
+$basecolor-secondary: magenta;
+
+
+// For foreground colours.
+$fgcolor-normal: #000000;
+$fgcolor-darkbg: #FFFFFF;
+$fgcolor-primary: $basecolor-primary;
+$fgcolor-secondary: $basecolor-secondary;
+$fgcolor-link: skyblue;
+
+
+// For background colours.
+$bgcolor-normal: #FFFFFF;
+$bgcolor-overlay: rgba(#000000, $opacity-overlay);
+$bgcolor-button__primary: $basecolor-primary;
+$bgcolor-button__secondary: $basecolor-secondary;
+$bgcolor-button__primary__disabled: rgba($bgcolor-button__primary, $opacity-disabled);
+$bgcolor-button__secondary__disabled: rgba($bgcolor-button__secondary, $opacity-disabled);
+
+
+// For border colours.
+$bdcolor-normal: #EEEEEE;
+$bdcolor-button__primary: $basecolor-primary;
+$bdcolor-button__secondary: $basecolor-secondary;
+$bdcolor-button__primary__disabled: rgba($bdcolor-button__primary, $opacity-disabled);
+$bdcolor-button__secondary__disabled: rgba($bdcolor-button__secondary, $opacity-disabled);
+
+
+// For border styles.
+$bdradius-normal: 4px;
+$bdradius-circle: 100%;
