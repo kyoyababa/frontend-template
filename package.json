@@ -5,6 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "del ./**/.DS_Store npm-debug.log dist",
+    "clean:node": "del ./node_modules",
     "mkdir": "mkdir dist dist/assets dist/assets/styles dist/assets/scripts",
     "ejs": "ejs-cli -b public/pages \"**/*.ejs\" -o dist",
     "watch:ejs": "watch 'npm run ejs' public/pages resources/components",
