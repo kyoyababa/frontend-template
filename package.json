@@ -1,10 +1,10 @@
 {
-  "name": "FrontendTemplateWithNpmScripts.",
-  "version": "1.0.0",
-  "description": "This is the description for this project.",
+  "name": "FrontendProjectTemplateByKyoyababa",
+  "version": "1.1.0",
+  "description": "Frontend Project Template / kyoyababa.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "clean": "del .DS_Store npm-debug.log dist",
+    "clean": "del ./**/.DS_Store npm-debug.log dist",
     "mkdir": "mkdir dist dist/assets dist/assets/styles dist/assets/scripts",
     "ejs": "ejs-cli -b public/pages \"**/*.ejs\" -o dist",
     "watch:ejs": "watch 'npm run ejs' public/pages resources/components",
@@ -12,19 +12,19 @@
     "autoprefixer": "postcss --use autoprefixer dist/assets/styles/style.css -d dist/assets/styles",
     "uglifycss": "uglifycss dist/assets/styles/style.css > dist/assets/styles/style.min.css",
     "watch:sass": "watch 'npm run sass && npm run autoprefixer' public/assets/styles/ resources/styles/",
-    "browserify": "browserify public/assets/scripts/common.ts --debug -t babelify -p [tsify --noImplicitAny] | exorcist dist/assets/scripts/bundle.js.map > dist/assets/scripts/bundle.js",
+    "browserify": "browserify public/assets/scripts/common.ts --debug -t babelify -p [tsify --noImplicitAny --experimentalDecorators --emitDecoratorMetadata] | exorcist dist/assets/scripts/bundle.js.map > dist/assets/scripts/bundle.js -d",
     "uglifyjs": "uglifyjs dist/assets/scripts/bundle.js > dist/assets/scripts/bundle.min.js",
     "watch:browserify": "watch 'npm run browserify' public/assets/scripts/ resources/scripts resources/types",
-    "transport": "cpx \"public/assets/images/**/*\" \"dist/assets/images\"",
-    "webserver": "http-server dist",
+    "transport": "(cpx \"public/assets/images/**/*\" \"dist/assets/images\")",
+    "watch:transport": "watch 'npm run transport' public/assets/images/",
+    "webserver": "http-server dist -a 127.0.0.1 -p 8080",
     "prepare": "npm run clean && npm run mkdir && npm run transport",
     "build": "npm run prepare && (npm run ejs & (npm run sass && npm run autoprefixer) & npm run browserify & npm run transport)",
     "build:production": "npm run build && (npm run uglifycss & npm run uglifyjs)",
-    "watch": "npm run prepare && (npm run watch:ejs & npm run watch:sass & npm run watch:browserify)",
+    "watch": "npm run prepare && (npm run watch:ejs & npm run watch:sass & npm run watch:browserify & npm run watch:transport)",
     "start": "npm run webserver & npm run watch"
   },
   "author": "kyoyababa",
-  "license": "MIT",
   "dependencies": {
     "@types/jquery": "^2.0.40",
     "@types/node": "^7.0.5",
@@ -45,11 +45,14 @@
     "node-sass": "^4.3.0",
     "nodemon": "^1.11.0",
     "postcss-cli": "^2.6.0",
+    "reflect-metadata": "^0.1.9",
+    "rxjs": "^5.1.1",
     "sourcemap": "^0.1.0",
     "tsify": "^3.0.1",
     "typescript": "^2.1.6",
     "uglify-js": "^2.7.5",
     "uglifycss": "0.0.25",
-    "watch": "^1.0.1"
+    "watch": "^1.0.1",
+    "zone.js": "^0.7.7"
   }
 }

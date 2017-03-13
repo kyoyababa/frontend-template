@@ -1,4 +1,4 @@
-# Frontend project template
+# Frontend Project Template / kyoyababa
 
 ## Specifications
 
