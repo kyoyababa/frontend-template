@@ -12,10 +12,10 @@ import * as Actions from "../../../resources/scripts/_actions";
 
 class InitializeApp {
   constructor() {
-
+    this.initializeApp();
   }
 
-  init() {
+  initializeApp() {
 
   }
 }
