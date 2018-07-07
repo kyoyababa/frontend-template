@@ -1,12 +1,38 @@
-# Frontend Project Template / kyoyababa
+# Frontend Project Template 2.0.0 / kyoyababa
 
 ## Specifications
 
-- HTML => [ejs-cli](https://www.npmjs.com/package/ejs-cli)
-- CSS transpiler => [node-sass](https://www.npmjs.com/package/node-sass)
-- CSS prefixer => [autoprefixer](https://www.npmjs.com/package/autoprefixer)
-- JavaScript => [Browserify](https://www.npmjs.com/package/browserify)
-- Assets transporter => [cpx](https://www.npmjs.com/package/cpx)
+* HTML : ejs
+* CSS : Sass
+* JavaScript : TypeScript
+* TaskRunner : Webpack
+
+## Structure
+
+root/
+　├ dist/
+　│　├ index.html
+　│　└ assets/
+　│　　　├ images/
+　│　　　├ scripts/
+　│　　　└ styles/
+　├ public/
+　│　├ pages/
+　│　├ 　└ index.ejs/
+　│　└ assets/
+　│　　　├ images/
+　│　　　├ scripts/
+　│　　　└ styles/
+　├ resources/
+　│　├ components/
+　│　├ 　└ *.ejs/
+　│　└ assets/
+　│　　　├ scripts/
+　│　　　├ styles/
+　│　　　└ types/
+　│　└ local/
+　│　　　└ bin/
+　└ README.md
 
 ## Commands
 

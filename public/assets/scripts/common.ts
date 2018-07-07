@@ -1,5 +1,5 @@
 // import required modules via npm
-import * as $ from 'jquery';
+import * as moment from 'moment';
 
 // import custom typing definitions
 import * as Types from '../../../resources/types/types.d';
@@ -16,7 +16,6 @@ class InitializeApp {
   }
 
   initializeApp() {
-
   }
 }
 
