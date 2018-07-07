@@ -42,17 +42,6 @@ module.exports = {
         })
       },
       {
-        test: /\.(jpg|png|gif)$/,
-        use: {
-          loader: 'file-loader',
-          options: {
-            name: './public/assets/images/[name].[ext]',
-            outputPath: './assets/images',
-            publicPath: path => '.' + path
-          }
-        }
-      },
-      {
         test: /\.ejs$/,
         use: 'ejs-compiled-loader'
       }
