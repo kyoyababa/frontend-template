@@ -1,3 +1,0 @@
-export function xxx(xxx: string): any {
-  // ...
-}
