@@ -1,12 +1,12 @@
-# Frontend Project Template 2.0.1 / kyoyababa
+# Frontend Project Template / kyoyababa
 
 ## Specifications
 
 * HTML : ejs
-* CSS : Sass
+* CSS : sass
 * JavaScript : TypeScript
 * Builder : Webpack
-* Test : Jasmine
+* Test : Karma, Jasmine
 
 ## Commands
 
