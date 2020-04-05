@@ -1,6 +1,3 @@
-// import required modules via npm
-import * as moment from 'moment';
-
 // import functions via scripts resources
 import * as Enums from "../resources/constants/enums";
 

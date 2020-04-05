@@ -1,8 +1,14 @@
+const webpackConfig = require('./webpack.config');
+
 // Karma configuration
 // Generated on Sun Dec 09 2018 22:54:22 GMT+0900 (JST)
 
 module.exports = function(config) {
   config.set({
+    mime: {
+      'text/x-typescript': ['ts','tsx']
+    },
+
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
     basePath: '',
@@ -27,8 +33,13 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      '**/*.ts': ['webpack'],
       '**/*.spec.ts': ['webpack']
+    },
+
+
+    webpack: {
+      module: webpackConfig.module,
+      resolve: webpackConfig.resolve
     },
 
 
@@ -66,13 +77,6 @@ module.exports = function(config) {
 
     // Concurrency level
     // how many browser should be started simultaneous
-    concurrency: Infinity,
-
-
-    plugins: [
-      'karma-chrome-launcher',
-      'karma-jasmine',
-      'karma-webpack'
-    ]
+    concurrency: Infinity
   })
 }
